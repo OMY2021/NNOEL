@@ -1,0 +1,21 @@
+private static FantasyCharacter createMonster() {
+   //Рандомайзер
+   int random = (int) (Math.random() * 10);
+   //С вероятностью 50% создается или скелет, или гоблин
+   if (random % 2 == 0) return new Goblin(
+           "Гоблин",
+           50,
+           10,
+           10,
+           100,
+           20
+   );
+   else return new Skeleton(
+           "Скелет",
+           25,
+           20,
+           20,
+           100,
+           10
+   );
+}
